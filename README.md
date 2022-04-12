@@ -18,6 +18,6 @@ Within this repository, you will find:
 
 Link to live URL: https://sarahgormley.github.io/Work-Day-Scheduler/
 
-Webpage Screenshot [Work-Day-Scheduler] (./) 
+Webpage Screenshot [Work-Day-Scheduler](./images/screenshotscheduler.png)
 
 
