@@ -12,12 +12,12 @@ var saveBtn = $('.btn')
 //Function to change the color if each time block depending on whether it matches the currenttime or is before/after
 $(".time-block").each(function() {
     var hourTime = $(this).attr("id").split("-")[1];
-    if (hourTime == currentTime) {
+    if (parseInt(hourTime) === parseInt(currentTime)) {
         $(this).css("background-color", "rgb(255, 251, 149)");
-    } else if (hourTime > currentTime) {
+    } else if (parseInt(hourTime) > parseInt(currentTime)) {
         $(this).css("background-color", "rgb(238, 187, 255)");
 
-    } else if (hourTime < currentTime) {
+    } else if (parseInt(hourTime) < parseInt(currentTime)) {
         $(this).css("background-color", "#c1ffbf");
 
     }
