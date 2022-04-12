@@ -13,13 +13,19 @@ var saveBtn = $('.btn')
 $(".time-block").each(function() {
     var hourTime = $(this).attr("id").split("-")[1];
     if (parseInt(hourTime) === parseInt(currentTime)) {
-        $(this).css("background-color", "rgb(255, 251, 149)");
+        $(this).addClass("present");
+        $(this).removeClass("future");
+        $(this).removeClass("past");
+
     } else if (parseInt(hourTime) > parseInt(currentTime)) {
-        $(this).css("background-color", "rgb(238, 187, 255)");
+        $(this).addClass("future");
+        $(this).removeClass("present");
+        $(this).removeClass("past");
 
     } else if (parseInt(hourTime) < parseInt(currentTime)) {
-        $(this).css("background-color", "#c1ffbf");
-
+        $(this).addClass("past");
+        $(this).removeClass("present");
+        $(this).removeClass("future");
     }
 
 })

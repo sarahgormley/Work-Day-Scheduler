@@ -16,9 +16,13 @@ textarea {
 .jumbotron {
     text-align: center;
     background-color: transparent;
-    color: black;
+    color: rgb(250, 200, 113);
     border-radius: 0;
-    border-bottom: 10px solid black;
+    border-bottom: 10px solid rgb(124, 179, 178);
+}
+
+#currentDay {
+    color: rgb(202, 123, 185);
 }
 
 .description {
@@ -43,22 +47,22 @@ textarea {
 }
 
 .past {
-    background-color: #d3d3d3;
+    background-color: #c1ffbf;
     color: white;
 }
 
 .present {
-    background-color: #ff6961;
+    background-color: rgb(255, 251, 149);
     color: white;
 }
 
 .future {
-    background-color: #77dd77;
+    background-color: rgb(221, 185, 241);
     color: white;
 }
 
 .saveBtn {
-    border-left: 1px solid black;
+    border-left: 1px solid #88c6d4;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #88c6d4;
