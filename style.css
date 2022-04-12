@@ -9,7 +9,7 @@ textarea {
     border: none;
     resize: none;
     color: #000000;
-    border-left: 1px solid black;
+    border-left: 1px solid rgb(0, 0, 0);
     padding: 10px;
 }
 
@@ -61,7 +61,7 @@ textarea {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: #06aed5;
+    background-color: #88c6d4;
     color: white;
 }
 

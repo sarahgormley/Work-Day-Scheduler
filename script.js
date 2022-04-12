@@ -1,12 +1,25 @@
+// Var for accessing current date via Moment.js and displaying it in currentday ID
 var currentDay = moment();
 $("#currentDay").text(currentDay.format("MMM Do, YYYY"));
 
-var currentTime = moment().hour();
+// Var for accessing current time in hours (as a number) via Moment.js
+var currentTime = moment().format('h');
+console.log(currentTime)
+
+// Var for save button
 var saveBtn = $('.btn')
 
+//Function to change the color if each time block depending on whether it matches the currenttime or is before/after
+$(".time-block").each(function() {
+    var hourTime = $(this).attr("id").split("-")[1];
+    if (hourTime == currentTime) {
+        $(this).css("background-color", "rgb(255, 251, 149)");
+    } else if (hourTime > currentTime) {
+        $(this).css("background-color", "rgb(238, 187, 255)");
 
-var currentHour = (new Date()).getHours();
+    }
 
+})
 
 // Function for getting values from local storage and placing them back in the textarea (#description) of each hour
 $("#hr-9 .description").val(localStorage.getItem("9"));
@@ -25,9 +38,7 @@ $("#hr-5 .description").val(localStorage.getItem("5"));
 // Had to use sibling and parent rule as accessing the ID directly wouldnt work. 
 // Using this formula also gets a number for each hour to match the current hour of the day
 saveBtn.on('click', function(event) {
-    var input = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id").split("-")[1];
+    var input = $(this).siblings(".description").val();
     localStorage.setItem(time, input)
-    console.log(input)
-    console.log(time)
 });
