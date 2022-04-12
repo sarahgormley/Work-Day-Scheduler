@@ -3,7 +3,7 @@ var currentDay = moment();
 $("#currentDay").text(currentDay.format("MMM Do, YYYY"));
 
 // Var for accessing current time in hours (as a number) via Moment.js
-var currentTime = moment().format('h');
+var currentTime = moment().format('H');
 console.log(currentTime)
 
 // Var for save button
@@ -17,20 +17,23 @@ $(".time-block").each(function() {
     } else if (hourTime > currentTime) {
         $(this).css("background-color", "rgb(238, 187, 255)");
 
+    } else if (hourTime < currentTime) {
+        $(this).css("background-color", "#c1ffbf");
+
     }
 
 })
 
 // Function for getting values from local storage and placing them back in the textarea (#description) of each hour
-$("#hr-9 .description").val(localStorage.getItem("9"));
-$("#hr-10 .description").val(localStorage.getItem("10"));
-$("#hr-11 .description").val(localStorage.getItem("11"));
-$("#hr-12 .description").val(localStorage.getItem("12"));
-$("#hr-1 .description").val(localStorage.getItem("1"));
-$("#hr-2 .description").val(localStorage.getItem("2"));
-$("#hr-3 .description").val(localStorage.getItem("3"));
-$("#hr-4 .description").val(localStorage.getItem("4"));
-$("#hr-5 .description").val(localStorage.getItem("5"));
+$("#hour-9 .description").val(localStorage.getItem("9"));
+$("#hour-10 .description").val(localStorage.getItem("10"));
+$("#hour-11 .description").val(localStorage.getItem("11"));
+$("#hour-12 .description").val(localStorage.getItem("12"));
+$("#hour-13 .description").val(localStorage.getItem("13"));
+$("#hour-14 .description").val(localStorage.getItem("14"));
+$("#hour-15 .description").val(localStorage.getItem("15"));
+$("#hour-16 .description").val(localStorage.getItem("16"));
+$("#hour-17 .description").val(localStorage.getItem("17"));
 
 
 
